@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 namespace stats {
-    
         float average(vector<float> iarr) {
             int i; int n = iarr.size();
             float sum,avg; 
@@ -11,40 +8,19 @@ namespace stats {
             return avg;
         }
 
-        vector<float> median(vector<float> iarr) {
-            float i,j,k,l; int n = iarr.size();
-            float med,med2,med3,val;
-            for (i=0;i<n;++i){
-                j=i;
-                j=(n-1)/2;
-                med=iarr[j];
-            }
-            for (j=0;j<n;++j){
-                med2=iarr[j];
-                k=i;
-                k=(n-2)/2;
-                med2=iarr[k];
-                l=k+1;
-                med3=iarr[l];
-            }
-            val=n%2;
-            if (val!=0){
-                return {med};
-            }
-            else{
-                return {med2,med3};
-            }
+        vector<float> median(vector<float> v) {
+            if (v.size()%2 != 0) {return {v[(v.size()-1)/2]};}
+            else {return {v[(v.size()-2)/2], v[(v.size()+1)/2]};}
         }
-
+    
+        #crown jewel (You can't find a way to calculate mode using C++ in the entire internet!)
         vector<float> mode(vector<float> v) {
             sort(v.begin(),v.end());
             vector<int> v2; int temp=0;
             for (int i=0;i<v.size();++i) {
                 temp = 0;
                 for (int j=i;j<v.size();++j) {
-                    if (v[i] == v[j]) {
-                        temp++;
-                    }
+                    if (v[i] == v[j]) temp++;
                 }
                 v2.push_back(temp);
             }
@@ -57,16 +33,12 @@ namespace stats {
                 }
             }
             vector<float> v4;
-            for (int i=0;i<v3.size();++i) {
-                v4.push_back(v[v3[i]]);
-            }
+            for (int i=0;i<v3.size();++i) v4.push_back(v[v3[i]]);
             return v4;
         }
-    
 }
 
 using namespace stats;
-
 int main() {
     //sample code
     vector<float> v {12,4,54,53,23,54,21,32,13,54,23,4};
@@ -78,4 +50,4 @@ int main() {
 }
 
 //namespace is used here for better cross-platform performance
-//You can just copy and paste this, and use the namespace stats anywhere and anytime you want (as C++ doesn't have in-built median or mode functions)
+//You can just copy and paste this, and use the namespace "stats" anywhere and anytime you want (as C++ doesn't have in-built average or median or mode functions)
