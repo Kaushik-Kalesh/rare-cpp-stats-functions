@@ -1,5 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
+float average(vector<float> iarr) {
+    int i; int n = iarr.size();
+    float sum,avg; 
+    avg=accumulate(iarr.begin(),iarr.end(),0)/n;
+    return avg;
+}
+vector<float> median(vector<float> iarr) {
+    float i,j,k,l; int n = iarr.size();
+    float med,med2,med3,val;
+    for (i=0;i<n;++i){
+        j=i;
+        j=(n-1)/2;
+        med=iarr[j];
+    }
+    for (j=0;j<n;++j){
+        med2=iarr[j];
+        k=i;
+        k=(n-2)/2;
+        med2=iarr[k];
+        l=k+1;
+        med3=iarr[l];
+    }
+    val=n%2;
+    if (val!=0){
+        return {med};
+    }
+    else{
+        return {med2,med3};
+    }
+}
 vector<float> mode(vector<float> v) {
     sort(v.begin(),v.end());
     vector<int> v2; int temp=0;
@@ -27,23 +57,7 @@ vector<float> mode(vector<float> v) {
     return v4;
 }
 int main() {
-    vector<float> v;
-    float n,x;
-    cout << "Enter the No.of.Numbers: "; cin >> n;
-    cout << "Enter the Numbers;\n";
-    for (int i=0;i<n;++i) {
-        cin >> x;
-        v.push_back(x);
-    }
-    vector<float> v2 = mode(v);
-    if (v2.size() != 1) {
-        cout << "The Mode of the numbers are [";
-        for (int i=0;i<v2.size()-1;++i) {
-            cout << v2[i] << "," ;
-        }
-        cout << v2[v2.size()-1] << "]\n";
-    }
-    else {
-        cout << "The Mode of the numbers is " << v2[0] << endl;
-    }
+    //code
 }
+
+//Note-The functions - average(), median() and mode() return vectors only
