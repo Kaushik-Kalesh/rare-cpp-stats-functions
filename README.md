@@ -1,4 +1,4 @@
-# rare-cpp-stats-functions
+# rare-mode()-in-C++
 
 C++ doesn't have built-in functions for statistics like to find average/median/mode
 Also source code to calculate mode can't also be found in the entire internet! 
