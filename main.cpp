@@ -30,6 +30,7 @@ int main() {
     vector<float> v;
     float n,x;
     cout << "Enter the No.of.Numbers: "; cin >> n;
+    cout << "Enter the Numbers;\n";
     for (int i=0;i<n;++i) {
         cin >> x;
         v.push_back(x);
