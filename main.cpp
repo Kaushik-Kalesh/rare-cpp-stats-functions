@@ -36,5 +36,14 @@ int main() {
         v.push_back(x);
     }
     vector<float> v2 = mode(v);
-    for (float i : v2) cout << i << " ";
+    if (v2.size() != 1) {
+        cout << "The Mode of the numbers are [";
+        for (int i=0;i<v2.size()-1;++i) {
+            cout << v2[i] << "," ;
+        }
+        cout << v2[v2.size()-1] << "]\n";
+    }
+    else {
+        cout << "The Mode of the numbers is " << v2[0] << endl;
+    }
 }
