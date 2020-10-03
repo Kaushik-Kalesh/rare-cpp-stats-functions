@@ -37,11 +37,10 @@ using namespace stats;
 int main() {
     //sample code
     vector<float> v {12,4,54,53,23,54,21,32,13,54,23,4};
-    for (auto i : stats::average(v)) cout << i << " ";
+    cout << stats::average(v) << endl; //returns (28.9167)
+    for (auto i : stats::median(v)) cout << i << " "; //returns a vector {54,21}
     cout << endl;
-    for (auto i : stats::median(v)) cout << i << " ";
-    cout << endl;
-    for (auto i : stats::mode(v)) cout << i << " ";
+    for (auto i : stats::mode(v)) cout << i << " "; //returns a vector {54}
 }
 
 //namespace is used here for better cross-platform performance
