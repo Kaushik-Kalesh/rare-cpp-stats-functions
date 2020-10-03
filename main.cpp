@@ -13,7 +13,7 @@ namespace stats {
             else {return {v[(v.size()-2)/2], v[(v.size()+1)/2]};}
         }
     
-        #crown jewel (You can't find a way to calculate mode using C++ in the entire internet!)
+        //crown jewel (You can't find SUCH a way to calculate mode using C++ in the entire internet!)
         vector<float> mode(vector<float> v) {
             sort(v.begin(),v.end());
             vector<int> v2; int temp=0;
@@ -50,4 +50,4 @@ int main() {
 }
 
 //namespace is used here for better cross-platform performance
-//You can just copy and paste this, and use the namespace "stats" anywhere and anytime you want (as C++ doesn't have in-built average or median or mode functions)
+//You can just copy and paste this, and use the namespace "stats" anywhere and anytime you want (as C++ doesn't have built-in average or median or mode functions)
