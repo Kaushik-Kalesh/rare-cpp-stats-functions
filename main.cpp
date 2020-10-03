@@ -33,7 +33,7 @@ namespace stats {
         }
 }
 
-using namespace std;
+using namespace stats;
 int main() {
     //sample code
     vector<float> v {12,4,48,53,23,54,21,32,13,54,23,4};
