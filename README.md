@@ -8,10 +8,14 @@ Just copy and paste the namespace "stats" and you can start working!
 Or copy and paste the functions (average(), median() and mode()) to work in C
 
 Definitions:
+
 Average/Mean - Average/Arithmetic Mean refers to the sum of a collection of numbers divided by the count of numbers in the collection.
+
 Median - Arithmetic Median is a positional average and refers to the middle value in a distribution.
+
 Mode - Arithmetic Mode refers to the most frequently occurring value in the data set. 
 
 Hope it helps!!!
 Do follow me!
-Thank You!
+Thank You!!!
+#coding
