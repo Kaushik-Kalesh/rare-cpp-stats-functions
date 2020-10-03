@@ -1,12 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 namespace stats {
-        float average(vector<float> iarr) {
-            int i; int n = iarr.size();
-            float sum,avg; 
-            avg=accumulate(iarr.begin(),iarr.end(),0)/n;
-            return avg;
-        }
+        float average(vector<float> v) {return (accumulate(v.begin(),v.end(),0.0))/(v.size());}
 
         vector<float> median(vector<float> v) {
             if (v.size()%2 != 0) {return {v[(v.size()-1)/2]};}
