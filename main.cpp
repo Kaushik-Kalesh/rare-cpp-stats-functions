@@ -4,8 +4,25 @@ namespace stats {
         float average(vector<float> v) {return (accumulate(v.begin(),v.end(),0.0))/(v.size());}
 
         vector<float> median(vector<float> v) {
-            if (v.size()%2 != 0) return {v[(v.size()-1)/2]};
-            else return {v[(v.size()-2)/2], v[(v.size()+1)/2]};
+            sort(v.begin(),v.end());
+            float i,j,k,l; int n = v.size();
+            float med,med2,med3,val;
+            for (i=0;i<n;++i){
+                j=i;
+                j=(n-1)/2;
+                med=v[j];
+            }
+            for (j=0;j<n;++j){
+                med2=v[j];
+                k=i;
+                k=(n-2)/2;
+                med2=v[k];
+                l=k+1;
+                med3=v[l];
+            }
+            val=n%2;
+            if (val!=0) return {med};
+            else return {(med2+med3)/2};
         }
     
         //crown jewel (You can't find SUCH a way to calculate mode using C++ in the entire internet!)
