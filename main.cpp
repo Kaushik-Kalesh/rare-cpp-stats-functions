@@ -54,11 +54,11 @@ using namespace stats;
 int main() {
     //sample code
     vector<float> v {12,4,48,53,23,54,21,32,13,54,23,4};
-    cout << average(v) << endl; //returns (28.4167)
+    cout << mean(v) << endl; //returns (28.4167)
     for (auto i : median(v)) cout << i << " "; //returns a vector {54,21}
     cout << endl;
     for (auto i : mode(v)) cout << i << " "; //returns a vector {4,23,54}
 }
 
 //namespace is used here for better cross-platform performance
-//You can just copy and paste this, and use the namespace "stats" anywhere and anytime you want (as C++ doesn't have built-in average or median or mode functions)
+//You can just copy and paste this, and use the namespace "stats" anywhere and anytime you want (as C++ doesn't have built-in mean or median or mode functions)
