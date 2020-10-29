@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 namespace stats {
-        float average(vector<float> v) {return (accumulate(v.begin(),v.end(),0.0))/(v.size());}
+        float mean(vector<float> v) {return (accumulate(v.begin(),v.end(),0.0))/(v.size());}
 
         vector<float> median(vector<float> v) {
             sort(v.begin(),v.end());
