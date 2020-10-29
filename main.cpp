@@ -3,7 +3,7 @@ using namespace std;
 namespace stats {
         float mean(vector<float> v) {return (accumulate(v.begin(),v.end(),0.0))/(v.size());}
 
-        vector<float> median(vector<float> v) {
+        float median(vector<float> v) {
             sort(v.begin(),v.end());
             float i,j,k,l; int n = v.size();
             float med,med2,med3,val;
@@ -21,8 +21,8 @@ namespace stats {
                 med3=v[l];
             }
             val=n%2;
-            if (val!=0) return {med};
-            else return {(med2+med3)/2};
+            if (val!=0) return med;
+            else return (med2+med3)/2;
         }
     
         //crown jewel (You can't find SUCH a way to calculate mode using C++ in the entire internet!)
@@ -55,7 +55,7 @@ int main() {
     //sample code
     vector<float> v {12,4,48,53,23,54,21,32,13,54,23,4};
     cout << mean(v) << endl; //returns (28.4167)
-    for (auto i : median(v)) cout << i << " "; //returns a vector {54,21}
+    cout << median(v) << endl; //returns a vector {54,21}
     cout << endl;
     for (auto i : mode(v)) cout << i << " "; //returns a vector {4,23,54}
 }
